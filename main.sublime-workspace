@@ -1,0 +1,292 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"game",
+				"game_over"
+			],
+			[
+				"wins",
+				"wins_and_losses"
+			],
+			[
+				"play",
+				"play_again"
+			],
+			[
+				"player",
+				"player_value"
+			],
+			[
+				"deck",
+				"deck1"
+			],
+			[
+				"pla",
+				"player_values"
+			],
+			[
+				"hand",
+				"hand_no_aces"
+			],
+			[
+				"de",
+				"dealer_hand"
+			],
+			[
+				"dealer",
+				"dealer_hand"
+			],
+			[
+				"to",
+				"to_s"
+			],
+			[
+				"draw",
+				"draw_board"
+			],
+			[
+				"empty",
+				"empty_spots"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/Users/owen/Downloads/tl-blackjack-webapp/main.rb",
+			"settings":
+			{
+				"buffer_size": 1255,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/owen/Downloads/tl-blackjack-webapp/main.rb",
+		"/Users/owen/tealeaf-week1/blackjack2.rb",
+		"/Users/owen/Downloads/tl-blackjack-webapp/public/vendor/bootstrap/css/bootstrap.css",
+		"/Users/owen/Downloads/tl-blackjack-webapp/public/application.css",
+		"/Users/owen/Downloads/tl-blackjack-webapp/helpers.rb",
+		"/Users/owen/Downloads/tl-blackjack-webapp/views/game.erb",
+		"/Users/owen/Downloads/tl-blackjack-webapp/views/layout.erb",
+		"/Users/owen/Downloads/tl-blackjack-webapp/views/name.erb",
+		"/Users/owen/tealeaf-week2/tealeaf-week2/blackjack_2.rb",
+		"/Users/owen/tealeaf/week1/blackjack-students",
+		"/Users/owen/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/owen/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/owen/Library/Application Support/Sublime Text 3/Packages/User/Ruby.sublime-settings",
+		"/Users/owen/tealeaf/week1/tictac-student.rb",
+		"/Users/owen/precourse/scope2.rb",
+		"/Users/owen/precourse/scope.rb",
+		"/Users/owen/precourse/calculator.rb",
+		"/Users/owen/precourse/crap.rb",
+		"/Users/owen/precourse/age.rb",
+		"/Users/owen/precourse/hashes1.rb",
+		"/Users/owen/precourse/hashes5.rb",
+		"/Users/owen/precourse/hashes6.rb",
+		"/Users/owen/precourse/more_stuff1.rb",
+		"/Users/owen/precourse/passing_block.rb",
+		"/Users/owen/precourse/exercises12.rb",
+		"/Users/owen/precourse/exercises14.rb",
+		"/Users/owen/precourse/exercises15.rb",
+		"/Users/owen/precourse/exercises16.rb",
+		"/Users/owen/precourse/pry_basics.rb",
+		"/Users/owen/tealeaf/week1/tictactoe.rb",
+		"/Users/owen/precourse/blackjack.rb",
+		"/Users/owen/precourse/case_statement.rb",
+		"/Users/owen/precourse/name.rb",
+		"/Users/owen/precourse/say.rb",
+		"/Users/owen/precourse/mutate.rb",
+		"/Users/owen/precourse/return.rb",
+		"/Users/owen/precourse/methods3.rb",
+		"/Users/owen/precourse/conditional.rb",
+		"/Users/owen/precourse/flow_control2.rb",
+		"/Users/owen/precourse/flow_control3.rb",
+		"/Users/owen/precourse/array7.rb",
+		"/Users/owen/precourse/iterating_over_hashes.rb",
+		"/Users/owen/precourse/flow1.rb",
+		"/Users/owen/precourse/methods2.rb",
+		"/Users/owen/precourse/methods1.rb",
+		"/Users/owen/precourse/variables1.rb",
+		"/Users/owen/precourse/variables2.rb",
+		"/Users/owen/ruby/sublime.rb"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"new_game",
+			"busted",
+			"print_deck_info"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/Users/owen/Downloads/tl-blackjack-webapp/main.rb",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1255,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "main.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
