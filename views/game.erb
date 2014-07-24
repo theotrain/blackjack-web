@@ -2,8 +2,8 @@
 <!-- show cards -->
 <h3>Dealer's Cards</h3>
 
-<% session[:dealer_hand].each do |c| %>
-  <span id='card'><img src="../images/cards/<%= c[0]+c[1] %>.gif" ></span>
+<% session[:dealer_hand].each_with_index do |c,i| %>
+  <span id='card'><img <%= i==session[:dealer_hand].length-1 && session[:show_deal_top] ? "id='throw'" : "" %> src="../images/cards/<%= c[0]+c[1] %>.gif" ></span>
 <% end %>
 
 <% if session[:dealer_hand].length == 1 %>
@@ -21,54 +21,52 @@
 <% @player_value = hand_value(session[:player_hand]) %>
 <h4 style="margin-top:20px;">You have <%= @player_value %>.</h4>
 
-<!-- <div id="card"><img id='throw' src="../images/cards/back.gif" ></div></div> -->
-<!-- <div id='box'>hi</div> -->
 
 
+<% if !session[:show_deal_top] %>
+  <!-- display rest of page -->
+  <% if @player_value < 21 && !session[:dealer_turn] %>
+    <!-- hit or stay buttons -->
+    <p id="action_buttons">
+      <form id="player_action" name="player_action" action="/game/player_action" method="POST">
+        <input style="margin-right:10px;" type="submit" value="Hit" class= "btn btn-success btn-large" name="action" />
+        <input type="submit" value="Stay" class= "btn btn-warning btn-large" name="action" />
+      </form>
+    </p>
+  <% end %>
 
-<!-- check total.
-if 21 print you win
-under 21 show hit/stay button
-over 21 show "youbusted".  set @game_over = true to display play again buttons -->
+  <% if @player_value == 21 %>
+    <h4>You win!</h4>
+    <% @game_over = true %>
+  <% end %>
 
-<% if @player_value < 21 && !session[:dealer_turn] %>
-  <!-- hit or stay buttons -->
+  <% if @player_value > 21 %>
+    <h4>You BUSTED!</h4>
+    <% @game_over = true %>
+  <% end %>
+
+  <% if session[:dealer_turn] %> 
+    <% @dealer_value = hand_value(session[:dealer_hand]) %>
+    <% @player_value = hand_value(session[:player_hand]) %>
+    <h4>The dealer has <%= @dealer_value %>.</h4>
+    <% if @dealer_value > 21 %>
+      <h4>Dealer busted, you win!</h4>
+    <% elsif @dealer_value >= @player_value %>
+      <h4>Sorry, you lose.</h4>
+    <% else %>
+      <h4>Huzzah, you win!</h4>
+    <% end %>
+  <% end %>
+
+  <% if @game_over || session[:dealer_turn] %>
+  <!-- play again -->
   <p id="action_buttons">
-    <form id="player_action" action="/game/player_action" method="POST">
-      <input style="margin-right:10px;" type="submit" value="Hit" class= "btn btn-success btn-large" name="action" />
-      <input type="submit" value="Stay" class= "btn btn-warning btn-large" name="action" />
+    <form id="play_again" action="/game/play_again" method="POST">
+      <input type="submit" value="Another Hand?" class= "btn btn-success btn-large" name="action" />
     </form>
   </p>
-<% end %>
-
-<% if @player_value == 21 %>
-  <h4>You win!</h4>
-  <% @game_over = true %>
-<% end %>
-
-<% if @player_value > 21 %>
-  <h4>You BUSTED!</h4>
-  <% @game_over = true %>
-<% end %>
-
-<% if session[:dealer_turn] %> 
-  <% @dealer_value = hand_value(session[:dealer_hand]) %>
-  <% @player_value = hand_value(session[:player_hand]) %>
-  <h4>The dealer has <%= @dealer_value %>.</h4>
-  <% if @dealer_value > 21 %>
-    <h4>Dealer busted, you win!</h4>
-  <% elsif @dealer_value >= @player_value %>
-    <h4>Sorry, you lose.</h4>
-  <% else %>
-    <h4>Huzzah, you win!</h4>
   <% end %>
-<% end %>
-
-<% if @game_over || session[:dealer_turn] %>
-<!-- play again -->
-<p id="action_buttons">
-  <form id="play_again" action="/game/play_again" method="POST">
-    <input type="submit" value="Another Hand?" class= "btn btn-success btn-large" name="action" />
-  </form>
-</p>
+<% else %>
+  <h4>The dealer has <%= hand_value(session[:dealer_hand]) %>.</h4>
+<!-- display NOTHING while we wait for animation to finish and resend form -->
 <% end %>
