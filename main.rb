@@ -42,6 +42,7 @@ end
 post '/game/player_action' do
   if params[:action] == "Hit"
     deal_card(session[:player_hand])
+    session[:show_deal] = true
   else #Stay
     session[:dealer_turn] = true
     while hand_value(session[:dealer_hand]) < 17

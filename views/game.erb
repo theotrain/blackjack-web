@@ -12,12 +12,18 @@
 
 <h3 style="margin-top:20px;"><%= session[:name].capitalize %>'s Cards</h3>
 
-<% session[:player_hand].each do |c| %>
-  <span id='card'><img src="../images/cards/<%= c[0]+c[1] %>.gif" ></span>
+<% session[:player_hand].each_with_index do |c,i| %>
+  <span id='card'><img <%= i==session[:player_hand].length-1 && session[:show_deal] ? "id='throw'" : "" %> src="../images/cards/<%= c[0]+c[1] %>.gif" ></span>
 <% end %>
+
+<% session[:show_deal] = false %>
 
 <% @player_value = hand_value(session[:player_hand]) %>
 <h4 style="margin-top:20px;">You have <%= @player_value %>.</h4>
+
+<!-- <div id="card"><img id='throw' src="../images/cards/back.gif" ></div></div> -->
+<!-- <div id='box'>hi</div> -->
+
 
 
 <!-- check total.

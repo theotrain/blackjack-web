@@ -28,3 +28,13 @@ a:focus {
   padding-right: 10px;
   margin-bottom: 10px;
 }
+#throw {
+  position:relative;
+}
+#box {
+  background-color: #00ff00;
+  height:50px;
+  width:50px;
+  display: block;
+  position: relative;
+}

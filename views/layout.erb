@@ -4,9 +4,41 @@
     <title>Blackjack</title>
     <link rel="stylesheet" href="/vendor/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="/application.css">
-  </head>
-  <body style="padding-top: 50px;">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js" ></script>
+    <script type="text/javascript" src="http://jqueryrotate.googlecode.com/svn/trunk/jQueryRotate.js"></script>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
+    <script>
+
+        // $("#box").click(
+        //   function () {
+        //      $("box").hide()
+        //   }
+        // )
+
+        $( document ).ready(function() {
+          //alert("what the fuck?");
+          // $('.container').animate({marginLeft: "-=550px", marginTop: "-=550px"}, 1000);
+          // $("#throw").hide()
+          var position = $("#throw").offset();
+          var bpos = $(".navbar").offset();
+          $("#throw").css({left:-400, top:-700});
+          $("#throw").rotate(-200);
+          $("#throw").rotate({animateTo:0})
+          $('#throw').animate({ left: "0px",
+            top:  "0px",
+            }, 600);
+          // $('#throw').rotate({ angle:360,animateTo:0,easing: $.easing.easeOutExpo })
+
+        });
+
+      </script>
+
+  </head>
+
+  
+
+  <body style="padding-top: 50px;">
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
