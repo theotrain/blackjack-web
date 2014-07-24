@@ -36,12 +36,12 @@
   <% end %>
 
   <% if @player_value == 21 %>
-    <h4>You win!</h4>
+    <h4 style="color:white;">You win!</h4>
     <% @game_over = true %>
   <% end %>
 
   <% if @player_value > 21 %>
-    <h4>You BUSTED!</h4>
+    <h4 style="color:white;">You BUSTED!</h4>
     <% @game_over = true %>
   <% end %>
 
@@ -50,11 +50,11 @@
     <% @player_value = hand_value(session[:player_hand]) %>
     <h4>The dealer has <%= @dealer_value %>.</h4>
     <% if @dealer_value > 21 %>
-      <h4>Dealer busted, you win!</h4>
+      <h4 style="color:white;">Dealer busted, you win!</h4>
     <% elsif @dealer_value >= @player_value %>
-      <h4>Sorry, you lose.</h4>
+      <h4 style="color:white;">Sorry, you lose.</h4>
     <% else %>
-      <h4>Huzzah, you win!</h4>
+      <h4 style="color:white;">Huzzah, you win!</h4>
     <% end %>
   <% end %>
 
